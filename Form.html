@@ -1,0 +1,47 @@
+<!-- ## The html code of the form goes here -->
+<!-- ## This is included in the Index.html page using "include('Form')" function -->
+
+<form id="myForm" class="p-2 border border-light rounded bg-light" onsubmit="handleFormSubmit(this)"> <!-- Call JavaScript function "handleFormSubmit" -->
+    <p class="h4 mb-4 text-center">Contact Details Form</p>
+    <div id="message"></div>
+    <input type="text" id="RecId" name="RecId" value="" style="display: none">
+	<div class="form-group">
+		<label for="name" >Name</label>
+		<input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
+	</div>
+	<div class="form-row">
+		<div class="form-group col-md-6">
+			<p>Gender</p>
+			<div class="form-check form-check-inline">
+				<input class="form-check-input" type="radio" name="gender" id="male" value="male">
+				<label class="form-check-label" for="male">Male</label>
+			</div>
+			<div class="form-check form-check-inline">
+				<input class="form-check-input" type="radio" name="gender" id="female" value="female">
+				<label class="form-check-label" for="female">Female</label>
+			</div>
+		</div>
+		<div class="form-group col-md-6">
+			<label for="dateOfBirth">Date of Birth</label>
+			<input type="date" class="form-control" id="dateOfBirth" name="dateOfBirth">
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="email">Email</label>
+		<input type="email" class="form-control" id="email" name="email" placeholder="Email">
+	</div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+          <label for="phone">Phone Number</label>
+          <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone Number">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="exampleFormControlSelect1">Country</label>
+        <select class="form-control" id="country" name="country">
+          <option>Select Country</option>
+        </select>
+      </div>
+    </div>
+	<button type="submit" class="btn btn-primary">Submit</button>
+    <input class="btn btn-secondary" type="reset" value="Reset">
+</form>
