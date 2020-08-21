@@ -13,10 +13,10 @@ function doGet(request) {
 function globalVariables(){ 
   var varArray = {
     spreadsheetId   : '10a45YRn6S9v9_aqT3XpwNradmchAC-rN9eiS75N8Ido', //** CHANGE !!!
-    dataRage        : 'Data!A2:G',                                    //** CHANGE !!! Vùng chứa dữ liệu sẽ nhập vào đây
+    dataRage        : 'Data!A2:H',                                    //** CHANGE !!! Vùng chứa dữ liệu sẽ nhập vào đây
     idRange         : 'Data!A2:A',                                    //** CHANGE !!! Vùng chứa ID tạo tự động
-    lastCol         : 'G',                                            //** CHANGE !!! Tuyên bố cột cuối cùng
-    insertRange     : 'Data!A1:G1',                                   //** CHANGE !!! Tuyên bố vị trí dòng đầu tiên được thêm vào
+    lastCol         : 'H',                                            //** CHANGE !!! Tuyên bố cột cuối cùng
+    insertRange     : 'Data!A1:H1',                                   //** CHANGE !!! Tuyên bố vị trí dòng đầu tiên được thêm vào
     sheetID         : '0'                                             //** CHANGE !!! Ref:https://developers.google.com/sheets/api/guides/concepts#sheet_id
   };
   return varArray;
@@ -48,7 +48,9 @@ function getFormValues(formObject){
                   formObject.dateOfBirth,
                   formObject.email,
                   formObject.phone,
-                  formObject.country]];
+                  formObject.country,
+//                  fomrObject.date=new Date().getTime()
+                  ]];
   }else{
     var values = [[new Date().getTime().toString(),//https://webapps.stackexchange.com/a/51012/244121
                   formObject.name,
@@ -56,7 +58,9 @@ function getFormValues(formObject){
                   formObject.dateOfBirth,
                   formObject.email,
                   formObject.phone,
-                  formObject.country]];
+                  formObject.country,
+//                  fomrObject.date=new Date().getTime()
+                 ]];
   }
   return values;
 }

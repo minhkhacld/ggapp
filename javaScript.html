@@ -43,6 +43,7 @@
                      "<tr>"+                               //Change table headings to match witht he Google Sheet
                       "<th scope='col'>Delete</th>"+
                       "<th scope='col'>Edit</th>"+
+//                      "<th scope='col'>Timestampe</th>"+
                       "<th scope='col'>ID</th>"+
                       "<th scope='col'>Name</th>"+
                       "<th scope='col'>Gender</th>"+
@@ -50,6 +51,7 @@
                       "<th scope='col'>Email</th>"+
                       "<th scope='col'>Phone</th>"+
                       "<th scope='col'>country</th>"+
+//                      "<th scope='col'>Date update</th>"+
                     "</tr>"+
                   "</thead>";
       for(var i=0; i<dataArray.length; i++) {
@@ -95,7 +97,7 @@
     document.getElementById('dateOfBirth').value = records[0][3];
     document.getElementById('email').value = records[0][4];
     document.getElementById('phone').value = records[0][5];
-    document.getElementById("country").value = records[0][6];
+    document.getElementById("country").value = records[0][6];    
     document.getElementById("message").innerHTML = "<div class='alert alert-warning' role='alert'>Update Record [ID: "+records[0][0]+"]</div>";
   }
   
